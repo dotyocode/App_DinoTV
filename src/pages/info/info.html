@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Sobre o Filme</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background">
+  <section class="imgs" style="border-radius: 15px">
+    <div class="imgs2">
+      <img
+        class=""
+        src="https://image.tmdb.org/t/p/original{{value.backdrop_path}}"
+      />
+    </div>
+  </section>
+
+  <div class="btns">
+    <button class="btnAssistir" ion-button>Assistir</button>
+    <button class="btnMinhaLista" ion-button>+ Minha Lista</button>
+  </div>
+
+  <div padding>
+    <h3 class="titulo">{{value.original_title}}</h3>
+  </div>
+
+  <div padding>
+    <h5 class="titulo2">Sinopse do Filme</h5>
+    <p class="paragrafo">{{value.overview}}</p>
+  </div>
+
+  <div>
+    <h5 padding class="titulo3">Assista o Trailer</h5>
+    <iframe
+      class="frame"
+      *ngIf="urlVideo"
+      width="413"
+      height="265"
+      frameborder="0"
+      [src]="sanitizer.bypassSecurityTrustResourceUrl(urlVideo)"
+    ></iframe>
+  </div>
+</ion-content>

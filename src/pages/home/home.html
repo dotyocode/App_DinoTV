@@ -1,14 +1,91 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="dark">
+    <ion-icon class="icons" ios="ios-menu" md="md-menu"></ion-icon>
+    <img class="logo" src="../../assets/imgs/logs.png" />
+    <ion-icon class="icons2" ios="ios-search" md="md-search"></ion-icon>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+<ion-content padding class="background">
+  <ion-slides
+    style="border-radius: 50%"
+    slidesPerView="1"
+    spaceBetween="1"
+    centeredSlides="true"
+    pager
+    class="teste3"
+    autoplay="3000"
+    speed="300"
+    loop="true"
+  >
+    <ion-slide style="border-radius: 15px">
+      <img class="imgs" src="../../assets/imgs/MK.jpg" />
+    </ion-slide>
+    <ion-slide style="border-radius: 15px">
+      <img class="imgs" src="../../assets/imgs/hp.jpg" />
+    </ion-slide>
+    <ion-slide style="border-radius: 15px">
+      <img class="imgs" src="../../assets/imgs/fos.jpg" />
+    </ion-slide>
+  </ion-slides>
+
+  <div class="meusFilmes">
+    <h5 class="titulo">Assistir Novamente</h5>
+    <ion-slides
+      slidesPerView="5"
+      spaceBetween="4"
+      class="teste2"
+      [options]="option"
+      *ngIf="movies"
+      style="margin-top: -3%"
+    >
+      <ion-slide *ngFor="let m of movies">
+        <img
+          (click)="sendPage($event, m)"
+          src="https://image.tmdb.org/t/p/w300{{m.poster_path}}"
+          class="teste"
+        />
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="meusFilmes">
+    <h5 class="titulo">Destaques</h5>
+    <ion-slides
+      slidesPerView="5"
+      spaceBetween="4"
+      class="teste2"
+      [options]="option"
+      *ngIf="movies"
+      style="margin-top: -3%"
+    >
+      <ion-slide *ngFor="let d of destaques">
+        <img
+          (click)="sendPage($event, d)"
+          src="https://image.tmdb.org/t/p/w300{{d.poster_path}}"
+          class="teste"
+        />
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="meusFilmes">
+    <h5 class="titulo">Em Alta</h5>
+    <ion-slides
+      slidesPerView="5"
+      spaceBetween="4"
+      class="teste2"
+      [options]="option"
+      *ngIf="movies"
+      style="margin-top: -3%"
+    >
+      <ion-slide *ngFor="let a of alta">
+        <img
+          (click)="sendPage($event, a)"
+          src="https://image.tmdb.org/t/p/w300{{a.poster_path}}"
+          class="teste"
+        />
+      </ion-slide>
+    </ion-slides>
+  </div>
 </ion-content>

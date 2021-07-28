@@ -1,0 +1,69 @@
+page-info {
+  ion-content.background {
+    background-color: rgb(17, 17, 17);
+  }
+
+  ion-header.background {
+    background-color: rgb(26, 26, 26);
+  }
+
+  .teste3 {
+    //width: 350px;
+    height: 292px;
+    //margin-left: 5px;
+    margin-top: -34px;
+  }
+
+  .titulo {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+
+  .btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btnAssistir {
+    background: rgb(231, 15, 15);
+  }
+
+  .btnMinhaLista {
+    background: rgb(124, 119, 119);
+  }
+
+  .paragrafo {
+    color: white;
+    padding: 3px;
+    font-weight: 100;
+    overflow: hidden;
+  }
+
+  .imgs {
+    height: 32vh;
+  }
+
+  .imgs2 {
+    width: inherit;
+    height: inherit;
+  }
+
+  .titulo2 {
+    color: white;
+  }
+
+  .titulo3 {
+    color: white;
+    margin-top: -5%;
+  }
+
+  .testando {
+  }
+
+  .frame {
+    margin-top: -5%;
+  }
+}
