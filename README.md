@@ -1,5 +1,5 @@
 
-# App DinoFlix - Clone Netflix - Ionic
+# App Dino Tv - Clone Netflix - Ionic
 
 Neste projeto, utilizei o Angular e Ionic.
 
