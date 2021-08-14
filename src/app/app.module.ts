@@ -16,6 +16,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ImgsSlideComponent } from "../components/imgs-slide/imgs-slide";
 import { InfoPage } from "../pages/info/info";
 
+
 @NgModule({
   declarations: [MyApp, HomePage, ImgsSlideComponent, InfoPage],
   imports: [BrowserModule, IonicModule.forRoot(MyApp), HttpClientModule],

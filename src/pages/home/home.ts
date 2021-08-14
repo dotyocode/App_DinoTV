@@ -13,14 +13,14 @@ export class HomePage {
   alta: Array<any>;
 
   option = {
-    slidesPerView: 1.5,
+    slidesPerView: 2,
   };
 
   constructor(
     public navCtrl: NavController,
     private movieApi: MoviesApiProvider,
     public navParams: NavParams
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.listar();
@@ -56,4 +56,5 @@ export class HomePage {
       m: m,
     });
   }
+
 }

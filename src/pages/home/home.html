@@ -7,17 +7,8 @@
 </ion-header>
 
 <ion-content padding class="background">
-  <ion-slides
-    style="border-radius: 50%"
-    slidesPerView="1"
-    spaceBetween="1"
-    centeredSlides="true"
-    pager
-    class="teste3"
-    autoplay="3000"
-    speed="300"
-    loop="true"
-  >
+  <ion-slides style="border-radius: 50%" slidesPerView="1" spaceBetween="1" centeredSlides="true" pager class="teste3"
+    autoplay="3000" speed="300" loop="true">
     <ion-slide style="border-radius: 15px">
       <img class="imgs" src="../../assets/imgs/MK.jpg" />
     </ion-slide>
@@ -31,60 +22,27 @@
 
   <div class="meusFilmes">
     <h5 class="titulo">Assistir Novamente</h5>
-    <ion-slides
-      slidesPerView="5"
-      spaceBetween="4"
-      class="teste2"
-      [options]="option"
-      *ngIf="movies"
-      style="margin-top: -3%"
-    >
+    <ion-slides slidesPerView="5" spaceBetween="0" class="teste2" *ngIf="movies" style="margin-top: -3%">
       <ion-slide *ngFor="let m of movies">
-        <img
-          (click)="sendPage($event, m)"
-          src="https://image.tmdb.org/t/p/w300{{m.poster_path}}"
-          class="teste"
-        />
+        <img (click)="sendPage($event, m)" src="https://image.tmdb.org/t/p/w300{{m.poster_path}}" class="teste" />
       </ion-slide>
     </ion-slides>
   </div>
 
   <div class="meusFilmes">
     <h5 class="titulo">Destaques</h5>
-    <ion-slides
-      slidesPerView="5"
-      spaceBetween="4"
-      class="teste2"
-      [options]="option"
-      *ngIf="movies"
-      style="margin-top: -3%"
-    >
+    <ion-slides slidesPerView="5" spaceBetween="4" class="teste2" *ngIf="movies" style="margin-top: -3%">
       <ion-slide *ngFor="let d of destaques">
-        <img
-          (click)="sendPage($event, d)"
-          src="https://image.tmdb.org/t/p/w300{{d.poster_path}}"
-          class="teste"
-        />
+        <img (click)="sendPage($event, d)" src="https://image.tmdb.org/t/p/w300{{d.poster_path}}" class="teste" />
       </ion-slide>
     </ion-slides>
   </div>
 
   <div class="meusFilmes">
     <h5 class="titulo">Em Alta</h5>
-    <ion-slides
-      slidesPerView="5"
-      spaceBetween="4"
-      class="teste2"
-      [options]="option"
-      *ngIf="movies"
-      style="margin-top: -3%"
-    >
+    <ion-slides slidesPerView="5" spaceBetween="4" class="teste2" *ngIf="movies" style="margin-top: -3%">
       <ion-slide *ngFor="let a of alta">
-        <img
-          (click)="sendPage($event, a)"
-          src="https://image.tmdb.org/t/p/w300{{a.poster_path}}"
-          class="teste"
-        />
+        <img (click)="sendPage($event, a)" src="https://image.tmdb.org/t/p/w300{{a.poster_path}}" class="teste" />
       </ion-slide>
     </ion-slides>
   </div>

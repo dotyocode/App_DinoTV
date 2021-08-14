@@ -5,14 +5,12 @@
 </ion-header>
 
 <ion-content class="background">
-  <section class="imgs" style="border-radius: 15px">
-    <div class="imgs2">
-      <img
-        class=""
-        src="https://image.tmdb.org/t/p/original{{value.backdrop_path}}"
-      />
-    </div>
-  </section>
+  <div
+    class="imgs2"
+    [style.background-size]="'cover'"
+    [style.background-repeat]="'no-repeat'"
+    [ngStyle]="{'background-position': 'center' ,'background-image': 'linear-gradient(to top, #111 30%, transparent 90%), url(https://image.tmdb.org/t/p/original' + value.backdrop_path + ')'}"
+  ></div>
 
   <div class="btns">
     <button class="btnAssistir" ion-button>Assistir</button>
@@ -21,9 +19,20 @@
 
   <div padding>
     <h3 class="titulo">{{value.original_title}}</h3>
+    <h3 class="votings" style="color: white">
+      Ranking Stars: {{value.vote_average}}
+      <ion-icon name="star" style="color: rgb(255, 0, 0)"></ion-icon>
+      <ion-icon name="star" style="color: rgb(255, 0, 0)"></ion-icon>
+      <ion-icon name="star" style="color: rgb(255, 0, 0)"></ion-icon>
+      <ion-icon name="star" style="color: rgb(255, 0, 0)"></ion-icon>
+      <ion-icon name="star" style="color: rgb(255, 0, 0)"></ion-icon>
+    </h3>
+    <p class="votings" style="color: white">
+      Lançamento: {{value.release_date}}
+    </p>
   </div>
 
-  <div padding>
+  <div class="sinopses" padding>
     <h5 class="titulo2">Sinopse do Filme</h5>
     <p class="paragrafo">{{value.overview}}</p>
   </div>
@@ -33,8 +42,8 @@
     <iframe
       class="frame"
       *ngIf="urlVideo"
-      width="413"
-      height="265"
+      width="100%"
+      height="280"
       frameborder="0"
       [src]="sanitizer.bypassSecurityTrustResourceUrl(urlVideo)"
     ></iframe>
